@@ -72,7 +72,7 @@ S_DB_URI = environ.get('S_DB_URI', "")   # This Db is for File Data Store When F
 
 
 # Premium And Referal Settings
-PREMIUM_AND_REFERAL_MODE = bool(environ.get('PREMIUM_AND_REFERAL_MODE', Ture)) # Set Ture Or False
+PREMIUM_AND_REFERAL_MODE = bool(environ.get('PREMIUM_AND_REFERAL_MODE', True)) # Set Ture Or False
 
 # If PREMIUM_AND_REFERAL_MODE is True Then Fill Below Variable, If Flase Then No Need To Fill.
 REFERAL_COUNT = int(environ.get('REFERAL_COUNT', '25')) # number of referal count
@@ -106,7 +106,7 @@ LONG_IMDB_DESCRIPTION = bool(environ.get("LONG_IMDB_DESCRIPTION", False))
 SPELL_CHECK_REPLY = bool(environ.get("SPELL_CHECK_REPLY", True))
 MELCOW_NEW_USERS = bool(environ.get('MELCOW_NEW_USERS', True))
 PROTECT_CONTENT = bool(environ.get('PROTECT_CONTENT', False))
-PUBLIC_FILE_STORE = bool(environ.get('PUBLIC_FILE_STORE', False))
+PUBLIC_FILE_STORE = bool(environ.get('PUBLIC_FILE_STORE', True))
 NO_RESULTS_MSG = bool(environ.get("NO_RESULTS_MSG", False))
 USE_CAPTION_FILTER = bool(environ.get('USE_CAPTION_FILTER', True))
 
@@ -128,7 +128,7 @@ VERIFY_SND_SHORTLINK_API = environ.get('VERIFY_SND_SHORTLINK_API', '')
 SHORTLINK_MODE = bool(environ.get('SHORTLINK_MODE', True)) # Set True Or False
 SHORTLINK_URL = environ.get('SHORTLINK_URL', 'anylinks.in')
 SHORTLINK_API = environ.get('SHORTLINK_API', '274c5e8696f908cd0ffde137e28d711d35d38ac2')
-TUTORIAL = environ.get('TUTORIAL', 'https://t.me/How_To_Open_Links_bypass') # How Open Shortner Link Video Link , Channel Link Where You Upload Your Video.
+TUTORIAL = environ.get('TUTORIAL', '') # How Open Shortner Link Video Link , Channel Link Where You Upload Your Video.
 
 
 # Others
@@ -161,12 +161,12 @@ STREAM_MODE = bool(environ.get('STREAM_MODE', False)) # Set True or False
 # If Stream Mode Is True Then Fill All Required Variable, If False Then Don't Fill.
 MULTI_CLIENT = False
 SLEEP_THRESHOLD = int(environ.get('SLEEP_THRESHOLD', '60'))
-PING_INTERVAL = int(environ.get("PING_INTERVAL", "50"))  # 1 minutes
+PING_INTERVAL = int(environ.get("PING_INTERVAL", "1200"))  # 20 minutes
 if 'DYNO' in environ:
     ON_HEROKU = True
 else:
     ON_HEROKU = False
-URL = environ.get("URL", "https://social-tarsier-kannadamagaa1-63a6ef3b.koyeb.app/")
+URL = environ.get("URL", "https://testofvjfilter-1fa60b1b8498.herokuapp.com/")
 
 
 # Rename Info : If True Then Bot Rename File Else Not
